@@ -26,7 +26,6 @@ function nextSequence() {
   randomColour = buttonColours[randomNumber];
   animatePress(randomColour);
   gamePattern.push(randomColour);
-  console.log("game array: " + gamePattern);
   playSound(randomColour);
   level += 1;
   $("#level-title").text("Level: " + level);
