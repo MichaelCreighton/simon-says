@@ -9,7 +9,7 @@ let level = 0;
 let started = false;
 
 // Watch for key press to start game
-$(document).mousedown(function() {
+$(document).keydown(function() {
   if(!started) {
       nextSequence();
       started = true;
