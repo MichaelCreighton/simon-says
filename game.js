@@ -1,5 +1,5 @@
 
-// JAvascript and JQuery demo
+// Javascript and JQuery demo
 
 
 const buttonColours = ["red", "blue", "green", "yellow"];
@@ -26,6 +26,7 @@ function nextSequence() {
   randomColour = buttonColours[randomNumber];
   animatePress(randomColour);
   gamePattern.push(randomColour);
+  console.log("game array: " + gamePattern);
   playSound(randomColour);
   level += 1;
   $("#level-title").text("Level: " + level);
@@ -39,7 +40,7 @@ $(".btn").click(function() {
     userClickedPattern.push(this.id);
     animatePress(this.id);
     playSound(this.id);
-    console.log("Player array: " + userClickedPattern);
+    
     checkAnswer(userClickedPattern.length - 1);
   }
 });
@@ -51,6 +52,8 @@ function playSound(name) {
 }
 
 // animate the clicked button 
+
+
 function animatePress(currentColour) {
   $("#" + currentColour).fadeOut(100).fadeIn(100);
   $("#" + currentColour).addClass("pressed");
